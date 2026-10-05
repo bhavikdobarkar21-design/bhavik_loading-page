@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brewly – Fresh Coffee Delivered</title>
+<style>
+  :root {
+    --brown: #3b2417;
+    --accent: #d97a2b;
+    --cream: #fbf5ec;
+    --text: #2a1d15;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--cream);
+  }
+  h1 { font-size: 3rem; line-height: 1.15; }
+  h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+  h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+
+  /* Navigation */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: .5rem 1.5rem;
+    padding: 1rem 5%;
+    background: var(--brown);
+  }
+  .logo { color: var(--white); font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+  nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; }
+  nav a.link { color: var(--cream); text-decoration: none; }
+  nav a.link:hover { color: var(--accent); }
+
+  /* Buttons */
+  .btn {
+    display: inline-block; padding: .85rem 2rem;
+    background: var(--accent); color: var(--white);
+    border-radius: 999px; text-decoration: none; font-weight: 600;
+  }
+  .btn:hover { background: #bd6620; }
+
+  /* Hero */
+  .hero {
+    padding: 6rem 5%; text-align: center; color: var(--white);
+    background: linear-gradient(135deg, var(--brown), #6b3f26);
+  }
+  .hero p { max-width: 36rem; margin: 1.25rem auto 2rem; font-size: 1.15rem; }
+
+  /* Sections */
+  section { padding: 4rem 5%; }
+  .container { max-width: 1000px; margin: 0 auto; }
+  .grid {
+    display: grid; gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .card {
+    background: var(--white); padding: 1.75rem;
+    border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.08);
+  }
+  .icon { font-size: 2rem; margin-bottom: .5rem; }
+  .alt { background: #f1e4d1; }
+  .quote { font-style: italic; margin-bottom: .75rem; }
+  .who { font-weight: 600; color: var(--accent); }
+
+  /* Footer */
+  footer { background: var(--brown); color: var(--cream); padding: 2.5rem 5%; text-align: center; }
+  footer a { color: var(--accent); text-decoration: none; margin: 0 .6rem; }
+  footer p { margin-top: .75rem; font-size: .9rem; }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    h1 { font-size: 2.1rem; }
+    h2 { font-size: 1.6rem; }
+    .hero { padding: 4rem 5%; }
+    nav { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#home">☕ Brewly</a>
+  <ul>
+    <li><a class="link" href="#home">Home</a></li>
+    <li><a class="link" href="#features">Features</a></li>
+    <li><a class="link" href="#reviews">Reviews</a></li>
+    <li><a class="link" href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="home">
+  <h1>Fresh‑Roasted Coffee,<br>Delivered to Your Door</h1>
+  <p>Small‑batch beans from ethical farms, roasted this week and shipped to you every month.</p>
+  <a class="btn" href="#features">Start Your Subscription</a>
+</header>
+
+<section id="features">
+  <div class="container">
+    <h2>Why Brewly?</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🌱</div><h3>Ethically Sourced</h3><p>We pay farmers fair prices for top‑grade, traceable beans.</p></div>
+      <div class="card"><div class="icon">🔥</div><h3>Roasted to Order</h3><p>Every bag is roasted within days of shipping for peak flavor.</p></div>
+      <div class="card"><div class="icon">🚚</div><h3>Free Delivery</h3><p>Skip, pause, or cancel anytime. Shipping is always on us.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="alt">
+  <div class="container">
+    <h2>What Customers Say</h2>
+    <div class="grid">
+      <div class="card"><p class="quote">“Best coffee I've had at home. The aroma alone is worth it.”</p><p class="who">— Priya S.</p></div>
+      <div class="card"><p class="quote">“Easy to manage and always on time. My mornings are better.”</p><p class="who">— Daniel R.</p></div>
+      <div class="card"><p class="quote">“Love the variety. Every month is a new favorite.”</p><p class="who">— Aisha K.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div>
+    <a href="mailto:hello@brewly.example">hello@brewly.example</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+    <a href="#">Facebook</a>
+  </div>
+  <p>© 2026 Brewly. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
